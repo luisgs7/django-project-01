@@ -38,3 +38,7 @@ def fname(request, nome: str):
         return JsonResponse({
             'Encontrado': 'False',
         })
+
+def pessoa(request, nome):
+    idade = ler_do_banco(nome)['idade']
+    return render(request, 'pessoa.html', {'idade': idade})

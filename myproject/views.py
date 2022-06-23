@@ -1,9 +1,8 @@
 from django.http import JsonResponse
+from django.shortcuts import render
 
 def hello(request):
-    return JsonResponse({
-        'nome': "Pedro",
-    })
+    return render(request, 'index.html')
 
 def articles(request, year: int):
     idade = 2022 - year

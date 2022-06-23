@@ -5,4 +5,4 @@ class Person(models.Model):
     last_name = models.CharField(max_length=30)
     age = models.IntegerField()
     salary = models.DecimalField(max_digits=5, decimal_places=2)
-    bio = models.TextField()
+    bio = models.TextField(max_length=255)
